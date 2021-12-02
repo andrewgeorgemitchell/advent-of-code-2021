@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/andrewgeorgemitchell/advent-of-code-2021/issues"
   },
-  "homepage": "https://github.com/andrewgeorgemitchell/advent-of-code-2021#readme"
+  "homepage": "https://github.com/andrewgeorgemitchell/advent-of-code-2021#readme",
+  "devDependencies": {
+    "jest": "^27.4.3"
+  }
 }

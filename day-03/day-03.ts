@@ -80,7 +80,7 @@ export const calculateRating = ({
     return matrix[0];
   }
 
-  const chars = charFrequencyForCol(col, matrix)
+  const chars = charFrequencyForCol(col, matrix);
 
   const compareValue = comparator({ zeroTotal: chars[0], oneTotal: chars[1] });
 

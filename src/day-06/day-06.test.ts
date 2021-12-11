@@ -80,7 +80,6 @@ describe("Day 06", () => {
     for (let i = 1; i < popStats.length; i++) {
       const currentExpectedPop = popStats[i];
       lanternFishSchool.incrementDay();
-      console.log('lanternFishSchool.getSchoolTimesByOrder():', lanternFishSchool.getSchoolTimesByOrder())
       expect(lanternFishSchool.getSchoolTimesByOrder()).toEqual(currentExpectedPop);
     }
   })

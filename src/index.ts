@@ -4,7 +4,7 @@ import day03 from "./day-03/day-03";
 import day04 from "./day-04/day-04";
 import day05 from "./day-05/day-05";
 import day06 from "./day-06/day-06";
-// import day07 from './day-07/day-07';
+import day07 from './day-07/day-07';
 // import day08 from './day-08/day-08';
 // import day09 from './day-09/day-09';
 // import day10 from './day-10/day-10';
@@ -31,7 +31,7 @@ const days = [
   day04,
   day05,
   day06,
-  // day07,
+  day07,
   // day08,
   // day09,
   // day10,

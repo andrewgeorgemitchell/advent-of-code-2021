@@ -21,11 +21,11 @@ const main = () => {
     fishSchool.incrementDay();
   });
   console.log(
-    "Part 1 (non-performant-simulation):",
+    "Part 1 (Non-performant-simulation):",
     fishSchool.getLanternFishCount()
   );
   console.log(
-    "Part 1 (non-performant-simulation) Duration: ",
+    "Part 1 (Non-performant-simulation) Duration: ",
     Date.now() - part1Start,
     "ms"
   );
@@ -39,11 +39,11 @@ const main = () => {
     fishSchoolPerformant.incrementDay();
   });
   console.log(
-    "Part 1 (performant):",
+    "Part 1 (Performant):",
     fishSchoolPerformant.getLanternFishCount()
   );
   console.log(
-    "Part 1 (performant) Duration: ",
+    "Part 1 (Performant) Duration: ",
     Date.now() - part1FastStart,
     "ms"
   );
@@ -68,17 +68,17 @@ const main = () => {
 
   // Part 2 Non Performant
   console.log(
-    "Part 2 (non-performant-simulation):",
+    "Part 2 (Non-performant-simulation):",
     "cannot run, will take too long"
   );
-  console.log("Part 2 (non-performant-simulation) Duration: ", "N/A");
+  console.log("Part 2 (Non-performant-simulation) Duration: ", "N/A");
 
   // Part 2 Performant
   console.log(
-    "Part 2 (performant):",
+    "Part 2 (Performant):",
     "cannot run, will take too long"
   );
-  console.log("Part 2 (performant) Duration: ", "N/A");
+  console.log("Part 2 (Performant) Duration: ", "N/A");
 
   // Part 2 Performant
   const part2Start = Date.now();
@@ -89,10 +89,10 @@ const main = () => {
     fishSchoolSuperPerformant2.incrementDay();
   });
   console.log(
-    "Part 2 (performant):",
+    "Part 2 (Super Performant):",
     fishSchoolSuperPerformant2.getLanternFishCount()
   );
-  console.log("Part 2 (performant) Duration: ", Date.now() - part2Start, "ms");
+  console.log("Part 2 (Super Performant) Duration: ", Date.now() - part2Start, "ms");
 };
 
 export default main;

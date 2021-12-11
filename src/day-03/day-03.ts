@@ -18,7 +18,6 @@ const main = () => {
   );
   const gammaValue = convertBinaryArrayToDecimal(gamma);
   const epsilonValue = convertBinaryArrayToDecimal(epsilon);
-  console.log("{gamma, epsilon}: ", { gamma, epsilon });
   console.log("Gamma Decimal: ", gammaValue);
   console.log("Epsilon Decimal: ", epsilonValue);
   console.log("product: ", epsilonValue * gammaValue);

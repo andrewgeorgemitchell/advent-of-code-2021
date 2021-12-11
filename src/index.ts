@@ -3,7 +3,7 @@ import day02 from "./day-02/day-02";
 import day03 from "./day-03/day-03";
 import day04 from "./day-04/day-04";
 import day05 from "./day-05/day-05";
-// import day06 from './day-06/day-06';
+import day06 from "./day-06/day-06";
 // import day07 from './day-07/day-07';
 // import day08 from './day-08/day-08';
 // import day09 from './day-09/day-09';
@@ -30,7 +30,7 @@ const days = [
   day03,
   day04,
   day05,
-  // day06,
+  day06,
   // day07,
   // day08,
   // day09,
@@ -52,16 +52,24 @@ const days = [
   // day25,
 ];
 
+const args = process.argv.slice(2);
+const numberToRunArg = Number(args[0]);
+
 const main = () => {
-  for (let index = 0; index < days.length; index++) {
-    const dayFunc = days[index];
+  let filteredDays = days;
+  if (numberToRunArg) {
+    filteredDays = days.filter((_day, i) => i + 1 === +numberToRunArg);
+  }
+  for (let index = 0; index < filteredDays.length; index++) {
+    const dayFunc = filteredDays[index];
+    const dayNumber = numberToRunArg ? numberToRunArg : index + 1;
     console.log("===========================");
-    console.log(`Day ${index + 1}`);
+    console.log(`Day ${dayNumber}`);
     console.log("===========================");
     const dayStart = Date.now();
     dayFunc();
     const dayDuration = Date.now() - dayStart;
-    console.log(`Day ${index + 1} Duration: `, dayDuration, "ms");
+    console.log(`Day ${dayNumber} Duration: `, dayDuration, "ms");
   }
 };
 

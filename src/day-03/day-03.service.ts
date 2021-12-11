@@ -1,7 +1,3 @@
-import fs from "fs";
-
-const fileString = fs.readFileSync(__dirname + "/day-03.data.txt").toString();
-
 export const convertBinaryToBits = (
   fileString: string
 ): Array<Array<number>> => {
@@ -28,7 +24,6 @@ export const charFrequencyForCol = (
 
 export const convertBinaryArrayToDecimal = (arr: Array<number>): number =>
   parseInt(arr.join(""), 2);
-// Part 1
 
 export const calculateGammaEpsilonNumbers = (
   bits: Array<Array<number>>
@@ -47,19 +42,6 @@ export const calculateGammaEpsilonNumbers = (
   }
   return { gamma, epsilon };
 };
-
-console.log("Part 1:");
-const { gamma, epsilon } = calculateGammaEpsilonNumbers(
-  convertBinaryToBits(fileString)
-);
-const gammaValue = convertBinaryArrayToDecimal(gamma);
-const epsilonValue = convertBinaryArrayToDecimal(epsilon);
-console.log("{gamma, epsilon}: ", { gamma, epsilon });
-console.log("Gamma Decimal: ", gammaValue);
-console.log("Epsilon Decimal: ", epsilonValue);
-console.log("product: ", epsilonValue * gammaValue);
-
-// Part 2
 
 export const calculateRating = ({
   col = 0,
@@ -124,20 +106,3 @@ export const C02RateComparator = ({
     return 0;
   }
 };
-
-console.log("Part 2:");
-const O2Rating = convertBinaryArrayToDecimal(
-  calculateRating({
-    matrix: convertBinaryToBits(fileString),
-    comparator: O2RateComparator,
-  })
-);
-const C02Rating = convertBinaryArrayToDecimal(
-  calculateRating({
-    matrix: convertBinaryToBits(fileString),
-    comparator: C02RateComparator,
-  })
-);
-console.log("O2Rating:", O2Rating);
-console.log("C02Rating:", C02Rating);
-console.log("product: ", O2Rating * C02Rating);

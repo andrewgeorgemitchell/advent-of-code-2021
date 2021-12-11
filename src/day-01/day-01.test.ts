@@ -1,4 +1,4 @@
-import { countIncreases, groupArrayBy3Overlapping } from "./day-01";
+import { countIncreases, groupArrayBy3Overlapping } from "./day-01.service";
 
 describe("Day 01", () => {
   test("Test countIncreases", () => {

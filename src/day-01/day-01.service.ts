@@ -1,9 +1,3 @@
-import fs from "fs";
-
-const fileString = fs.readFileSync(__dirname + "/day-01-1.data.txt").toString();
-
-const fileInputArray = fileString.split("\n").map((string) => parseInt(string));
-
 export const countIncreases = (array: number[]) => {
   let iterator = 0;
 
@@ -17,8 +11,6 @@ export const countIncreases = (array: number[]) => {
 
   return iterator;
 };
-
-console.log("Part 1: ", countIncreases(fileInputArray));
 
 export const groupArrayBy3Overlapping = (array: number[]): number[] => {
   const newArray = [];
@@ -34,8 +26,3 @@ export const groupArrayBy3Overlapping = (array: number[]): number[] => {
   }
   return newArray;
 };
-
-console.log(
-  "Part 2: ",
-  countIncreases(groupArrayBy3Overlapping(fileInputArray))
-);

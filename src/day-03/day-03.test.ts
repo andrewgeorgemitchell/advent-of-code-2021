@@ -6,7 +6,7 @@ import {
   O2RateComparator,
   C02RateComparator,
   convertBinaryArrayToDecimal,
-} from "./day-03";
+} from "./day-03.service";
 
 const testInputFileString = `00100
 11110

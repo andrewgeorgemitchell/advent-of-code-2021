@@ -3,7 +3,7 @@ import {
   calculatePositionWithAngle,
   convertFileStringToArray,
   DirectionEnum,
-} from "./day-02";
+} from "./day-02.service";
 
 const testFileInput = `forward 5
 down 5

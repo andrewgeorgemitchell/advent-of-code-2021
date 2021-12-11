@@ -4,7 +4,12 @@
   "description": "Advent of code 2021",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node dist/index.js",
+    "build": "yarn clean && tsc && yarn copy-files",
+    "dev": "ts-node src/index.ts",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.data.txt dist/"
   },
   "repository": {
     "type": "git",
@@ -22,6 +27,11 @@
     "@babel/preset-typescript": "^7.16.0",
     "@types/jest": "^27.0.3",
     "babel-jest": "^27.4.2",
-    "jest": "^27.4.3"
+    "copyfiles": "^2.4.1",
+    "jest": "^27.4.3",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.3",
+    "yarn": "^1.22.17"
   }
 }

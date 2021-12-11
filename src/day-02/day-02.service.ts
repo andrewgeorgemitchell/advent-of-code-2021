@@ -1,7 +1,3 @@
-import fs from "fs";
-
-const fileString = fs.readFileSync(__dirname + "/day-02.data.txt").toString();
-
 export enum DirectionEnum {
   Forward = "forward",
   Backward = "backward",
@@ -24,7 +20,6 @@ export const convertFileStringToArray = (
   });
 };
 
-// Part 1
 export const calculatePosition = (
   array: Array<{
     direction: DirectionEnum;
@@ -52,13 +47,6 @@ export const calculatePosition = (
   return { x, y };
 };
 
-const { x, y } = calculatePosition(convertFileStringToArray(fileString));
-console.log("Part 1:");
-console.log("x:", x);
-console.log("y:", y);
-console.log("product:", x * y);
-
-// Part 2
 export const calculatePositionWithAngle = (
   array: Array<{
     direction: DirectionEnum;
@@ -89,8 +77,3 @@ export const calculatePositionWithAngle = (
   return { x, y };
 };
 
-const { x: x2, y: y2 } = calculatePositionWithAngle(convertFileStringToArray(fileString));
-console.log("Part 2:");
-console.log("x:", x2);
-console.log("y:", y2);
-console.log("product:", x2 * y2);
